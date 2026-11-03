@@ -1,0 +1,95 @@
+{
+  "variant": "mixed-size daily scaling demonstration",
+  "modified_from_original": [
+    "NORMAL.BMP",
+    "SAFETY.BMP"
+  ],
+  "assets": {
+    "ALARM.PCM": {
+      "bytes": 96000,
+      "sha256": "0c47a7e7ec5a09c200e965b0c6b6c48940c7f926380be9961b138ed6eb2a01e9",
+      "xor8": "b5"
+    },
+    "EVAC.BMP": {
+      "bytes": 921654,
+      "sha256": "bf8a185e68bbe1ddf623a5e86000a0fa086e96f3a08344957e43c8e50e321dc7",
+      "xor8": "b6",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FIRE.BMP": {
+      "bytes": 921654,
+      "sha256": "2b71c8fe4909d16a80ef0c8f3a7436941926c1c3d374e555ce1d4abd45ee64f2",
+      "xor8": "79",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FIRE.PCM": {
+      "bytes": 192159,
+      "sha256": "a43c7df7ed99637d6394ba6b465e829224350f7113a495d98675c57925550e38",
+      "xor8": "4a"
+    },
+    "FLOOD.BMP": {
+      "bytes": 921654,
+      "sha256": "ef70a239b13e29c71cf58031d394463a90c820acfac540510db5e4eeb4556761",
+      "xor8": "1d",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FLOOD.PCM": {
+      "bytes": 174528,
+      "sha256": "6bb76c8a5959efac344f65349b191ccb85794a6e4c759da538272878ab931c80",
+      "xor8": "fe"
+    },
+    "NORMAL.BMP": {
+      "bytes": 230454,
+      "sha256": "2fe47b91dcb690e07dc2a14027d00d08e9dbfa9e9aa599460e897337ac59be22",
+      "xor8": "b4",
+      "width": 320,
+      "height": 240,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "QUAKE.BMP": {
+      "bytes": 921654,
+      "sha256": "81cb70fc9229202d65a97692c8a6c2efbc6756cd5154c5c500ed421eacac1a40",
+      "xor8": "78",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "QUAKE.PCM": {
+      "bytes": 162688,
+      "sha256": "0c26fde233691ae26cfcaac92a461df1290db4ac9359b5a6bbd773ab47511bb1",
+      "xor8": "0a"
+    },
+    "SAFETY.BMP": {
+      "bytes": 1440054,
+      "sha256": "34a0a56a4952191b686200a5496bc20c3632ef7a0653f19c023c99491b4b3e19",
+      "xor8": "29",
+      "width": 800,
+      "height": 600,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    }
+  }
+}

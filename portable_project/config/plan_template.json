@@ -1,0 +1,12 @@
+{
+  "normal_dwell_seconds": 5,
+  "emergency_dwell_seconds": 2,
+  "default_volume": 2,
+  "default_scene": "campus",
+  "events": [
+    {"name": "fire", "priority": 2, "audio": "FIRE.PCM"},
+    {"name": "quake_or_crowd", "priority": 2, "audio": "QUAKE.PCM"},
+    {"name": "flood_or_power", "priority": 2, "audio": "FLOOD.PCM"},
+    {"name": "evac_or_escalator", "priority": 2, "audio": "ALARM.PCM"}
+  ]
+}

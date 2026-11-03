@@ -1,0 +1,475 @@
+{
+  "release": "emergency-terminal-v2-20261101_212706",
+  "verified_at": "2026-11-01T20:51:07.372247",
+  "device": "EG4S20BG256",
+  "route_seed": 3,
+  "video_port": "HDMI_B",
+  "hardware_tested": false,
+  "scenes": [
+    "校园应急",
+    "疏散演练",
+    "商场应急"
+  ],
+  "local_publish_and_clear_confirmation": true,
+  "controls": {
+    "normal_key2_key3_short": "cycle campus / drill / mall; reset selected event to fire",
+    "emergency_key2_key3_short": "status / history / content; scene remains locked",
+    "key2_long_all_scenes": "toggle auto / manual",
+    "chord_join_ms": 200,
+    "chord_maximum_ms": 1000,
+    "long_chord_switches_scene": false
+  },
+  "visual_prompts": "simultaneous Chinese / English / symbol or direction arrow",
+  "innovations": {
+    "warning_levels": [
+      "BLUE normal",
+      "YELW pending",
+      "ORNG local evacuation",
+      "RED left-half / right-half / all-zone"
+    ],
+    "adaptive_route": {
+      "campus_and_mall": "KEY3 confirmation required",
+      "drill": "automatic update and change count",
+      "warning_follows_accepted_route": true,
+      "automatic_60_second_escalation": false,
+      "sw3_sw2_sw1_hazard_masks": [
+        1,
+        2,
+        4,
+        8,
+        15,
+        5,
+        10,
+        15
+      ],
+      "route_scores": {
+        "single": 95,
+        "half": 70,
+        "all": 0
+      }
+    },
+    "audio_visualization": {
+      "type": "32 recent 1ms PCM peak envelopes",
+      "width_pixels": 512,
+      "height_pixels": 32,
+      "style": "2px strokes with 2px transparent gaps, vivid cyan-green center to bright yellow tips, symmetric upper/lower motion, no background, label or baseline",
+      "content_pages": "all campus / drill / mall emergency events",
+      "stops_on_mute_or_silence": true
+    },
+    "drill_assessment": {
+      "score_range": [
+        0,
+        100
+      ],
+      "excellent_minimum": 90,
+      "pass_minimum": 75,
+      "report_dismiss": "KEY2 short"
+    },
+    "asset_integrity": {
+      "images": "on-chip XOR8 before display",
+      "audio": "on-chip XOR8 after one complete playback",
+      "offline_package": "SHA-256 plus ZIP CRC32",
+      "crc_bound_to_approved_assets": true
+    },
+    "configurable_plan": {
+      "file": "PLAN.BIN",
+      "format_version": 1,
+      "size_bytes": 24,
+      "integrity": "XOR8",
+      "fallback": "built-in defaults when missing or invalid"
+    },
+    "fault_recovery": {
+      "last_verified_frames_remain_visible": true,
+      "skip_verified_sdram_banks_on_rescan": true,
+      "alarm_during_recovery": "on-chip fallback",
+      "retry_seconds": 5,
+      "automatic_rescan": true
+    }
+  },
+  "mall_audio": {
+    "火情": "FIRE.PCM",
+    "人员拥挤": "ALARM.PCM",
+    "停电故障": "ALARM.PCM",
+    "扶梯故障": "ALARM.PCM"
+  },
+  "history": {
+    "capacity": 4,
+    "volatile": true,
+    "maximum_seconds": 999
+  },
+  "bit": {
+    "file": "emergency_terminal_v2_hdmi_b.bit",
+    "bytes": 648267,
+    "sha256": "abb960304d2c075e4abb64b6bb42fb74aa920886ca8d22fb6f684967369710a1"
+  },
+  "timing_ns": {
+    "SWNS": 0.292,
+    "HWNS": 0.024
+  },
+  "simulations": {
+    "Safety": {
+      "sha256": "9e769103b1a15737f0c338116e66c51a1b911692543711a098fe16f9d4923b60",
+      "pass_marker": "PASS safety switch debounce",
+      "log_updated_at": "2026-11-01T20:47:19.095082"
+    },
+    "Fallback": {
+      "sha256": "de873f34ce7357ed5c1ee65610f23804b133f094b9f534f9e924e04ab85b8e3a",
+      "pass_marker": "PASS TF-independent alarm",
+      "log_updated_at": "2026-11-01T20:47:19.298828"
+    },
+    "SafetyOverlay": {
+      "sha256": "12a16cb76e1a731de766f0d68b948d8938a07985a003524d44b4676481e16d10",
+      "pass_marker": "PASS map pixels",
+      "log_updated_at": "2026-11-01T20:49:27.172365"
+    },
+    "Control": {
+      "sha256": "c4d6124b8868fb3758a142ebd35238e1bf3a660e56b9c1ce479090c39696fee9",
+      "pass_marker": "PASS UART commands",
+      "log_updated_at": "2026-11-01T20:49:27.754086"
+    },
+    "Scale": {
+      "sha256": "4c61d0774ed386e8fb07cd3a7fa0c45ff45e796ab43550295b089382303c50fe",
+      "pass_marker": "ALL SCALE/LOAD TESTS PASSED",
+      "log_updated_at": "2026-11-01T20:51:08.043395"
+    },
+    "Ingest": {
+      "sha256": "5ded62e8823203d415a96f406119f9122a471ccaf536bf0a773cc4d701430f5f",
+      "pass_marker": "PASS FAT root chain",
+      "log_updated_at": "2026-11-01T20:52:33.137964"
+    },
+    "IngestRetry": {
+      "sha256": "a873aa7bc87e06b9bbb1f1c39aa70bc3378b44052a049089abf2bcd4c551fdf9",
+      "pass_marker": "PASS whole-image retry",
+      "log_updated_at": "2026-11-01T20:53:58.672383"
+    },
+    "Memory": {
+      "sha256": "140f98b835dec56daf17ce0173c671db93354623546f8fad9d6cbb9e06aa8226",
+      "pass_marker": "PASS progressive loading",
+      "log_updated_at": "2026-11-01T21:02:27.780407"
+    },
+    "AudioStreamer": {
+      "sha256": "f017cf96848821d545b1db149ea8e5f7789beaebb3c82926050d2d297886d74b",
+      "pass_marker": "PASS audio FAT32",
+      "log_updated_at": "2026-11-01T21:02:27.872150"
+    },
+    "AudioPlayer": {
+      "sha256": "eb4e2da30c064ddd66b16ab3b8fb4d157f5648701f169ebe9ed616c5fb75a703",
+      "pass_marker": "PASS PCM event selection",
+      "log_updated_at": "2026-11-01T21:02:27.970778"
+    },
+    "Overlay": {
+      "sha256": "f9df389026062a6bad4886bd50756bb5b20496224f1bc4886e8cdf98d837d3b7",
+      "pass_marker": "PASS OSD glyph pixels",
+      "log_updated_at": "2026-11-01T21:02:28.335193"
+    },
+    "SectorArbiter": {
+      "sha256": "88941b08ac36c7cd0abc8fd6402cff16b0135df497ac3f57f180742fb7637259",
+      "pass_marker": "PASS sector arbitration",
+      "log_updated_at": "2026-11-01T21:02:28.420749"
+    },
+    "SectorReplay": {
+      "sha256": "f1951f45e230d8c9ed25f6c4120c63d111a46dab5cdd09ca833434a39a2e2c1a",
+      "pass_marker": "PASS bounded sector retries",
+      "log_updated_at": "2026-11-01T21:02:28.540106"
+    },
+    "LoadContention": {
+      "sha256": "ed31fb94572bb89fcc5faf8719c1e0ea894823793763ceb1d9c7dc485b9b9af3",
+      "pass_marker": "PASS full-row background contention",
+      "log_updated_at": "2026-11-01T21:03:11.736498"
+    },
+    "MediaAssets": {
+      "sha256": "1bbcacc115b2a531f800ce338fde4b5418d2506507ec2da9317afb78d2bb1866",
+      "pass_marker": "PASS actual six BMPs",
+      "log_updated_at": "2026-11-01T21:26:41.666436"
+    },
+    "Plan": {
+      "sha256": "69323a22d1aa482048d45d3361351eeb13b8bcb6719050a6502555ab74f6b581",
+      "pass_marker": "PASS configurable plan",
+      "log_updated_at": "2026-11-01T20:49:27.874182"
+    },
+    "Recovery": {
+      "sha256": "834ca737eea62323caabc3ec1e4f2061e0761ae0087b1c0ab43d2c88a1a49335",
+      "pass_marker": "PASS media self-healing",
+      "log_updated_at": "2026-11-01T20:49:27.973469"
+    }
+  },
+  "assets": {
+    "ALARM.PCM": {
+      "bytes": 96000,
+      "sha256": "0c47a7e7ec5a09c200e965b0c6b6c48940c7f926380be9961b138ed6eb2a01e9",
+      "xor8": "b5"
+    },
+    "EVAC.BMP": {
+      "bytes": 921654,
+      "sha256": "bf8a185e68bbe1ddf623a5e86000a0fa086e96f3a08344957e43c8e50e321dc7",
+      "xor8": "b6",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FIRE.BMP": {
+      "bytes": 921654,
+      "sha256": "2b71c8fe4909d16a80ef0c8f3a7436941926c1c3d374e555ce1d4abd45ee64f2",
+      "xor8": "79",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FIRE.PCM": {
+      "bytes": 192159,
+      "sha256": "a43c7df7ed99637d6394ba6b465e829224350f7113a495d98675c57925550e38",
+      "xor8": "4a"
+    },
+    "FLOOD.BMP": {
+      "bytes": 921654,
+      "sha256": "ef70a239b13e29c71cf58031d394463a90c820acfac540510db5e4eeb4556761",
+      "xor8": "1d",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FLOOD.PCM": {
+      "bytes": 174528,
+      "sha256": "6bb76c8a5959efac344f65349b191ccb85794a6e4c759da538272878ab931c80",
+      "xor8": "fe"
+    },
+    "NORMAL.BMP": {
+      "bytes": 230454,
+      "sha256": "2fe47b91dcb690e07dc2a14027d00d08e9dbfa9e9aa599460e897337ac59be22",
+      "xor8": "b4",
+      "width": 320,
+      "height": 240,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "QUAKE.BMP": {
+      "bytes": 921654,
+      "sha256": "81cb70fc9229202d65a97692c8a6c2efbc6756cd5154c5c500ed421eacac1a40",
+      "xor8": "78",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "QUAKE.PCM": {
+      "bytes": 162688,
+      "sha256": "0c26fde233691ae26cfcaac92a461df1290db4ac9359b5a6bbd773ab47511bb1",
+      "xor8": "0a"
+    },
+    "SAFETY.BMP": {
+      "bytes": 1440054,
+      "sha256": "34a0a56a4952191b686200a5496bc20c3632ef7a0653f19c023c99491b4b3e19",
+      "xor8": "29",
+      "width": 800,
+      "height": 600,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    }
+  },
+  "assets_modified_from_v1": [
+    "NORMAL.BMP",
+    "SAFETY.BMP"
+  ],
+  "assets_unchanged_from_v1": {
+    "ALARM.PCM": {
+      "bytes": 96000,
+      "sha256": "0c47a7e7ec5a09c200e965b0c6b6c48940c7f926380be9961b138ed6eb2a01e9",
+      "xor8": "b5"
+    },
+    "EVAC.BMP": {
+      "bytes": 921654,
+      "sha256": "bf8a185e68bbe1ddf623a5e86000a0fa086e96f3a08344957e43c8e50e321dc7",
+      "xor8": "b6",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FIRE.BMP": {
+      "bytes": 921654,
+      "sha256": "2b71c8fe4909d16a80ef0c8f3a7436941926c1c3d374e555ce1d4abd45ee64f2",
+      "xor8": "79",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FIRE.PCM": {
+      "bytes": 192159,
+      "sha256": "a43c7df7ed99637d6394ba6b465e829224350f7113a495d98675c57925550e38",
+      "xor8": "4a"
+    },
+    "FLOOD.BMP": {
+      "bytes": 921654,
+      "sha256": "ef70a239b13e29c71cf58031d394463a90c820acfac540510db5e4eeb4556761",
+      "xor8": "1d",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "FLOOD.PCM": {
+      "bytes": 174528,
+      "sha256": "6bb76c8a5959efac344f65349b191ccb85794a6e4c759da538272878ab931c80",
+      "xor8": "fe"
+    },
+    "QUAKE.BMP": {
+      "bytes": 921654,
+      "sha256": "81cb70fc9229202d65a97692c8a6c2efbc6756cd5154c5c500ed421eacac1a40",
+      "xor8": "78",
+      "width": 640,
+      "height": 480,
+      "bpp": 24,
+      "compression": 0,
+      "normalized_width": 640,
+      "normalized_height": 480
+    },
+    "QUAKE.PCM": {
+      "bytes": 162688,
+      "sha256": "0c26fde233691ae26cfcaac92a461df1290db4ac9359b5a6bbd773ab47511bb1",
+      "xor8": "0a"
+    }
+  },
+  "image_scaling": {
+    "output": [
+      640,
+      480
+    ],
+    "algorithm": "nearest neighbour in BMP row order",
+    "daily_source_sizes": {
+      "NORMAL.BMP": [
+        320,
+        240
+      ],
+      "SAFETY.BMP": [
+        800,
+        600
+      ]
+    },
+    "emergency_source_size": [
+      640,
+      480
+    ],
+    "runtime_zoom_key": false,
+    "framebuffer_bytes": 7372800,
+    "content_signatures_updated": true
+  },
+  "plan": {
+    "bytes": 24,
+    "sha256": "2985bc09dfbbedbc617a7dc99514d97f2015c81511606b72f83c8e039bcf7790",
+    "normal_dwell_seconds": 5,
+    "emergency_dwell_seconds": 2,
+    "default_volume": 2,
+    "default_scene": 0
+  },
+  "portable_sources": {
+    "src/bmp_scale_decoder.v": "983004cca009af0087da3d9c5ccc38840f7651c986619545d2a1c188f603185e",
+    "src/emergency_terminal_top.v": "d3a82b8e132bde9c92a3075acad80546f2c6a876f77c7241fc3289d9865d4bcf",
+    "src/fat32_audio_streamer.v": "42a23a9b31616cb84e333834c756bfb0defb96405061c964dc1e57eae1b79163",
+    "src/fat32_volume_scanner.v": "fa9c0bf53d72fa4e9fba900259dc7ebf9067702314a11ea10386da118c0f2aa8",
+    "src/media_frame_loader.v": "ae7dffea24078ab9d12f3ff12298e27fe7ef37d99f8eb4e23dce2ed1b8422af2",
+    "src/media_frame_reader.v": "8f304c3eaff9401774ab3e575cbff3c345c6fa7578eec0ab50cf1dd25663d8fe",
+    "src/media_ingest_frontend.v": "7b851e6fe8320c6f1c369d316f9e258c43cc31c1e071851b4497c15fc7278723",
+    "src/media_ingest_pipeline.v": "7ff3debfb2486ef4922dfc89ffc6dbccfe58dd834302282c47c4b4c999addf7f",
+    "src/media_sector_arbiter.v": "3d872426e56d7cb47f7dffc9f6a2409f31c18f8f0efea940bd295cbc7dcb500b",
+    "src/media_storage_ingest_top.v": "2d9d006603cb0cfa12c1e08909dc253009ca61d196524d477330e747ee44948d",
+    "src/sd_sector_replay_buffer.v": "0257fdaea6860815a2649e6fde0d1ac9deb85e40f3ccc3a0b5e68872d213267f",
+    "src/terminal_alarm_fallback.v": "69bbb9820bbcedcb04c6a7e5a7dd6d7e4dd2344f279ea393c225520533177b75",
+    "src/terminal_board_body.vh": "99b6e8e1f84b95a1a5303eef456fe957e38327885465c4ca6aaa1c68241de8ee",
+    "src/terminal_control.v": "afefe471f03046a8cb4ee85b99343e3bf315f86f4b1b982a3771e73e88444084",
+    "src/terminal_glyphs.hex": "7304f4ba9800a6022fc77d719f128ce6f988596126866ade8e55b51d70a30f19",
+    "src/terminal_keys.v": "43712d783e4be6726e406446833290ccb0d8bb71f7deddeda16a14f9e9d65ee2",
+    "src/terminal_media_recovery.v": "35e0158e9b3a2f3a03fa9ab3ed8aad917dc9cf93fc0d15dc85682089e78148d8",
+    "src/terminal_overlay.v": "c0bbf7796b4b18858e014b18beebfd094968802a57a7c7c53ad6039fb3fb6176",
+    "src/terminal_safety.v": "02e840bcc304bc18c7d1c200ff61cb85c7c82c365a4ed3a6e707e1e66bd2b578",
+    "src/terminal_safety_font.v": "b8b1b1fca6ca40d1ff4b163a8970c6178d8e67b21bb95185bcbea3a6ec907af7",
+    "src/terminal_safety_overlay.v": "83d3e6f21a1896b24209f5c842889681cf1252da5ebf6b43e4b5f7adbb578048",
+    "src/terminal_sevenseg.v": "6a6da0c10df936f0550f5499f42c77e0d39986bdafd29f242ae0527479af57ef",
+    "src/terminal_text_rom.v": "e4824bff5cb1d3950a9001d37f3a8814bf19afd7140c2e9bda0dbd6707ec9769",
+    "src/tf_pcm_audio_player.v": "b2df34a6b373167f85bc09fd53e24d91c4a95555dce0c57870573dae2f1a6b3a",
+    "constraints/terminal.adc": "20236c902859fe0076cb0e6ca85a4da0328fae6f89a50399c21aea0390b9d2f2",
+    "constraints/terminal.sdc": "1dd3360a4296e35e85c0484420cbbad2c8e5275641e1fcf47091e1fb192cbffc",
+    "dependencies/dependencies/lesson36_build/al_ip/afifo_32_16_256.v": "2457f4737c5c0981eb7281774b42c24bec4c62e87cf8dd892da057f27e8b891c",
+    "dependencies/dependencies/lesson36_build/al_ip/clk_wize.v": "d7d2d6b2ba167f557ffcd1b6155341e6dbd684b949c0f2eeb5b87ba706e05211",
+    "dependencies/dependencies/lesson36_build/al_ip/sys_pll.v": "a25dd68a1c01605b9c67e8e794010352cb4d223721aa8ed235642a84225fc794",
+    "dependencies/dependencies/lesson36_build/src/button_event.v": "c27f78a942fed06a5a9e455d8e314352660a4b7710b8b369e031ccff266ae215",
+    "dependencies/dependencies/lesson36_build/src/fifo_prefetch_2.v": "c5c088f4e195f1c193ef84f0ecb70e0dc83adf88736b31fcb58ffba036d3a76d",
+    "dependencies/dependencies/lesson36_build/src/reset_sync.v": "422024379917ce7895550df38c07600a32ecf11c4bb643e91abd235ddd42fd9d",
+    "dependencies/dependencies/lesson36_build/src/rgb_video_adapter.v": "edcca4a11291e590e48ab292567dba3eb40b185f021e00112b8155db9bd19e68",
+    "dependencies/dependencies/lesson36_build/src/sdram/enc_file/global_def.v": "024d865f99c800985143b30133d82c78da08ba8f610770b51d383fa272b2beaa",
+    "dependencies/dependencies/lesson36_build/src/sdram/enc_file/sdr_as_ram.enc.v": "a3555c3d2a6675da55055651f00cb60102239042ed3e5df06970bfee88ffd7f1",
+    "dependencies/dependencies/lesson36_build/src/sdram/enc_file/sdr_init_ref.enc.v": "5e5919939bb4102db249102180a7d749e9d5acaf8aa34b4004ff74b348eb988d",
+    "dependencies/dependencies/lesson36_build/src/sdram/enc_file/sdr_wrrd.enc.v": "c7d7fe07d75f66aa88d9f986b3006319c995162434f104f9990664b374cdfdd2",
+    "dependencies/dependencies/lesson36_build/src/sdram/sdram.v": "0e6bd47671df376a75336354ccd2258f06ff0daf5c85d02d96d5992e276c2fbe",
+    "dependencies/dependencies/lesson36_build/src/sync_2ff.v": "691a3ea359a4ac443ab87d3202a1f3398f16e46b83066efd485f25f912f47fe9",
+    "dependencies/dependencies/lesson36_build/src/video_timing_ctrl.v": "aa73503223feb3a7d9c861d06019225a51b6b3215159ea9c44ef42125acf0546",
+    "dependencies/dependencies/official_hdmi/audio_arc_calculate.v": "552d8d86afd237666b30ae08f31247808e89eb024efde5efc670b82eb617a7dc",
+    "dependencies/dependencies/official_hdmi/hdmi_1_4b_transmitter_core_wrapper.enc.v": "867e0b0bdd874bc383d00918c9e1be3fe01edf41f343b6a0d73e262776596a63",
+    "dependencies/dependencies/official_hdmi/hdmi_phy_wrapper.v": "416b082b0987001bdbc0a7e20a557cb8fb1dca34e25dc881e6d28a8cb3cf4300",
+    "dependencies/dependencies/official_hdmi/lane_lvds_10_1.v": "de9529321354f04837e051d0ec1681cf44783d4be3284703a788e081147500bc",
+    "dependencies/dependencies/official_hdmi/startup_pulse.v": "396e1e56febb8028339e646bc2f06b83e07ab11ef840e447422fb941956741c9",
+    "dependencies/dependencies/official_hdmi/video_rgb_to_axis_640x480.v": "1c8fc26c789f87227036bea034f1ab6fc5633f2ab2684be422c54687a290fb96",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_audio_packet_scheduler.v": "216d8ee51aac51c1eb2ac071c36ed153beea928cc0273d38ef59f19bf822de8f",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_audio_symbol_core.v": "ef05ef0aa8770255d7c60a7459d63e44fe5caf9fa3cdfa6cfa2f7e4ea5762a20",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_data_island_mapper.v": "711eca917fbcb9aa69153b0678411a155b70d05ecffb353f9a2eefa4e93ea542",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_data_island_scheduler.v": "3cbc82d784ee52c9a1ddf7420a7a1403429f47d99b8b4f11fe28a06911e9d1ef",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_terc4_encoder.v": "03879709456f4857d861833fd2290b4469a03e0fecb2d3f830ff939912ee8daa",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_tmds_channel_encoder.v": "a2a8d1422f82f3cf826dcdfc6ed824745617ea358e220021ea48f9cda5d7ac3d",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_tmds_eg4_phy.v": "831ce2aac7035b5b8175b2bb38d97bf174940693b9694bc185d4df64466f6384",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_tmds_eg4_serializer.v": "834135ec8376c89aacc3379702778c7357cf37930947e4e99ba90e78933aca3d",
+    "dependencies/risk_prototypes/hdmi_audio_route_b/rtl/hdmi_tmds_serializer_core.v": "63a0a23c8590fc54e5640b215d7a377c593f9c25347fbe859556ab8baaaa9c94",
+    "dependencies/rtl/audio/pcm_media_tone.v": "e709e9331f323a8738feb84970b498c609a746256b1e3b78d7c02326e547b0e0",
+    "dependencies/rtl/config/config_flash_journal.v": "fd13c106f0f96f5ad2f61f99a73c725bf316b9b8505a2e5be6d79bf585bd67ba",
+    "dependencies/rtl/config/config_journal.v": "2b63e1cadd442aa361522eedd34cb706accf8f5b1fd7101b152231b87d0bf9d1",
+    "dependencies/rtl/config/player_config_persistence.v": "1a120c179224bfc4c604bdd086f910796fe4d60397bbdce6a42374dccf812030",
+    "dependencies/rtl/config/spi_byte_engine.v": "7f4eb1fa86e01610451ec140ab5aaaa24052977b5df972c2f08b68dc8404e7ea",
+    "dependencies/rtl/config/w25q64_preflight_reader.v": "42268808045584d4e3fc7572fbc3b5881431da161dfb0a2b30e70d2bba1fa9d5",
+    "dependencies/rtl/config/w25q64_record_store.v": "38f69face2d2e94bfbdc0043b520ed2a3e60099eb481c76e5e11091bf7f44324",
+    "dependencies/rtl/control/media_player_control.v": "844f91511ebf6daa76d838c76a5d5bafb5c686b440c579c6a605a7efd33c1759",
+    "dependencies/rtl/display/brand_watermark_24.v": "c93e4a0c83daca334de4be3d224c8de7cfd17fa9a5f8ea2bdc6aad719942c764",
+    "dependencies/rtl/display/osd_overlay_24.v": "0cc595e392a32db5411a886d51b133d2dbc9df5b7bf3e187e74345ed0056110b",
+    "dependencies/rtl/display/promax_audio_waveform.v": "9c0a9b0043808e33e22f0ee1f97ff1b9bc2582edc14698c71ee6d3e56ed0f7d7",
+    "dependencies/rtl/display/status_osd_overlay.v": "6aabef2ca14afb047bc78bde4ce1b38849f949058fe64f1638fb77bc7ef0f1e0",
+    "dependencies/rtl/display/subtitle_scroll_24.v": "9b5e65108454ffe8023f9f55ef8a8701cc5c3a321a61a78edbc485838b7f09a5",
+    "dependencies/rtl/display/video_fade_transition.v": "93863aaf80aa5f78846364909db60f87c43f2009e8063f079013959db46434d8",
+    "dependencies/rtl/filesystem/fat32_file_streamer.v": "0a2aac71496cd6184ee08329f376da7834a5cf5282a678dfef64c57e79b0ad24",
+    "dependencies/rtl/image/bmp24_decoder.v": "db3b09edc1f4a666418db93302a6691aa83ee3aef3b913e21047d8808366b468",
+    "dependencies/rtl/integration/media_video_pipeline.v": "df999de759e541cb6464a1c3d1edc174e0e089edd2a3ba5790ed49148971a6e9",
+    "dependencies/rtl/io/dual_key_chord_router.v": "5929e4faca074f164c06d216684aa65cf09359e97100bac935dc09483615377a",
+    "dependencies/rtl/io/dual_key_long_hold_guard.v": "61e45a90c1566efad0497bceaef6f7f4827517b648dfa5dc8c92965b512d1512",
+    "dependencies/rtl/io/param_menu_controller.v": "9723b0b842558224893a330c457a67b4440e47115c512b236cba55740416f296",
+    "dependencies/rtl/io/sticky_error_cdc.v": "8caaefe45a23a3fa4a048d41843ada5cdff71189531bc9cb85d55374c08461c9",
+    "dependencies/rtl/io/uart_status_reporter.v": "d04ee59af5cf39e0c53f25ef710451856994f0edc96238fe54bf211c5ffb2761",
+    "dependencies/rtl/io/uart_tx_byte.v": "d95e41077380e99f32d4c2697805772f3505e2f7b88a70e64ac9475c2f55bca0",
+    "dependencies/rtl/memory/media_sdram_arbiter.v": "44c184343f2afb88aaedd8a2bc240221348044cd4dac7042611ca261c87cffce",
+    "dependencies/rtl/storage/sd_media_service.v": "592b81f4150ec8673cfcfe7dd6a9f9031d0601182d1c6d70ead09bef9f2a5f0a",
+    "dependencies/rtl/storage/sd_spi_byte_engine.v": "0ff2a1f17f3b3955ee1e45ce5d28d16dea57f17ea19a2b7335d6e12067c5d417",
+    "dependencies/rtl/storage/sd_spi_command.v": "0c82828a34b6d3130fbdfc16bc27fc910b6c8bdc48888df71b5a58f66c76d2a4",
+    "dependencies/rtl/storage/sd_spi_init.v": "1d4261d13cc92f44591ba03ffe1022db32d83a20acab3a7f4885b90023bb92e8",
+    "dependencies/rtl/storage/sd_spi_sector_reader.v": "c93818636f74d443a5bb0b4945e3569870a6795ec97de7d96fa8c1f1afa01acc",
+    "project/emergency_terminal.al": "e45349f20aa3ef696ba50563708580fe814f4e63eaab64fa24e97b9ce27fda37",
+    "project/enc_file/global_def.v": "024d865f99c800985143b30133d82c78da08ba8f610770b51d383fa272b2beaa",
+    "project/src/sdram/enc_file/global_def.v": "024d865f99c800985143b30133d82c78da08ba8f610770b51d383fa272b2beaa"
+  }
+}
