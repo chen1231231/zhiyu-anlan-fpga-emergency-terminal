@@ -1,0 +1,15 @@
+actual BMP bank=0 size=320x240 bytes=230454
+actual BMP bank=1 size=800x600 bytes=1440054
+actual BMP bank=2 size=640x480 bytes=921654
+actual BMP bank=3 size=640x480 bytes=921654
+actual BMP bank=4 size=640x480 bytes=921654
+actual BMP bank=5 size=640x480 bytes=921654
+release banks committed: 000001 at 100885713000
+release banks committed: 000011 at 723383888000
+release banks committed: 000111 at 1118016088000
+release banks committed: 001111 at 1512648288000
+release banks committed: 011111 at 1907280488000
+release banks committed: 111111 at 2301912688000
+PASS mixed-size actual assets: 320x240 enlarged, 800x600 reduced, four 640x480 unchanged; normalized pixels and addresses checked
+PASS actual six BMPs: 1843200 matching SDRAM writes; four PCM streams, background sound, volume mute; valid PLAN.BIN; starts=4 bytes=18432
+D:\completecode1\emergency_v2\sim\tb_media_assets.sv:130: $finish called at 2303654150000 (1ps)

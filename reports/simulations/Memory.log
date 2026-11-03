@@ -1,0 +1,8 @@
+bank 0 committed at 57737838000
+bank 2 committed at 115480113000
+bank 3 committed at 173233638000
+bank 4 committed at 230976563000
+bank 5 committed at 288716438000
+bank 1 committed at 346455938000
+PASS progressive loading: first_pixel=67200200 ns all_loaded=346455938 ns frames=19 pixels=5836800 background_reads=5124736 priority_contests=7163
+D:\completecode1\emergency_v2\sim\tb_terminal_memory.sv:238: $finish called at 385280180000 (1ps)

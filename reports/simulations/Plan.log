@@ -1,0 +1,2 @@
+PASS configurable plan: defaults, normal/emergency dwell boundaries, priority and scene selection
+D:\completecode1\emergency_v2\sim\tb_plan_config.sv:45: $finish called at 7320000 (1ps)

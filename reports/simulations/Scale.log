@@ -1,0 +1,8 @@
+PASS size 320x240 top_down=1 bank=0 every pixel + SDRAM address checked
+PASS size 320x240 top_down=0 bank=1 every pixel + SDRAM address checked
+PASS size 640x480 top_down=1 bank=2 every pixel + SDRAM address checked
+PASS size 640x480 top_down=0 bank=3 every pixel + SDRAM address checked
+PASS size 800x600 top_down=1 bank=4 every pixel + SDRAM address checked
+PASS size 800x600 top_down=0 bank=5 every pixel + SDRAM address checked
+PASS corrupt/truncated BMP never committed; ALL SCALE/LOAD TESTS PASSED
+D:\completecode1\emergency_v2\sim\tb_scale_load.sv:101: $finish called at 259304970000 (1ps)

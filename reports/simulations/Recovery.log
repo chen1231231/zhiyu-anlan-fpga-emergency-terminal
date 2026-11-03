@@ -1,0 +1,2 @@
+PASS media self-healing: boot, failed scan retry, runtime fault and automatic recovery
+D:\completecode1\emergency_v2\sim\tb_media_recovery.sv:34: $finish called at 270000 (1ps)

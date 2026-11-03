@@ -1,0 +1,5 @@
+Compile Overlay
+Run Overlay (full pixel checks can take several minutes)
+PASS OSD glyph pixels, no 0000, five-level bars; lit glyph pixels=595
+D:\completecode1\emergency_v2\sim\tb_terminal_overlay.sv:65: $finish called at 291146000 (1ps)
+All requested simulations passed.

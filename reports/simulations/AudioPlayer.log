@@ -1,0 +1,2 @@
+PASS PCM event selection, plan mappings and mall voice guard, 3x samples, loop, switch, tail and error stop
+D:\completecode1\emergency_v2\sim\tb_tf_pcm_audio_player.sv:133: $finish called at 8610000 (1ps)

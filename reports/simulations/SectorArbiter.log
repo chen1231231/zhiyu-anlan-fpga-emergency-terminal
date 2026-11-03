@@ -1,0 +1,2 @@
+PASS sector arbitration: simultaneous pulses, retained LBAs, alternating service and exclusive routing
+D:\completecode1\emergency_v2\sim\tb_media_sector_arbiter.sv:47: $finish called at 400000 (1ps)

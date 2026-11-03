@@ -1,0 +1,9 @@
+request         128 lba=      1182 byte8=00
+request         129 lba=      1183 byte8=00
+request         130 lba=        32 byte8=03
+root FAT parse cluster=         2 next=00000003 max=      8184 lba=        32
+request         131 lba=      1184 byte8=42
+request         132 lba=      2080 byte8=00
+request         133 lba=      2081 byte8=60
+PASS FAT root chain + shuffled names + missing/corrupt/truncated files; later valid banks loaded; 1495 sectors 921600 writes
+D:\completecode1\emergency_v2\sim\tb_fat_ingest.sv:119: $finish called at 122531170000 (1ps)

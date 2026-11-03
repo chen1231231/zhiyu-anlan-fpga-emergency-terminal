@@ -1,0 +1,2 @@
+PASS TF-independent alarm, frequency/cadence, five levels, starvation recovery and mute
+D:\completecode1\emergency_v2\sim\tb_alarm_fallback.sv:32: $finish called at 600160000 (1ps)

@@ -1,0 +1,110 @@
+Compile Safety
+Run Safety (full pixel checks can take several minutes)
+PASS safety switch debounce, four-level warning, adaptive drill route, locked real route, assessment and history
+D:\completecode1\emergency_v2\sim\tb_terminal_safety.sv:130: $finish called at 925610000 (1ps)
+Compile Fallback
+Run Fallback (full pixel checks can take several minutes)
+PASS TF-independent alarm, frequency/cadence, five levels, starvation recovery and mute
+D:\completecode1\emergency_v2\sim\tb_alarm_fallback.sv:32: $finish called at 600160000 (1ps)
+Compile SafetyOverlay
+Run SafetyOverlay (full pixel checks can take several minutes)
+PASS map pixels, SW3 all-zone flashing hazard, accessible prompt, current event summary, route safety and rendered previews
+D:\completecode1\emergency_v2\sim\tb_safety_overlay.sv:259: $finish called at 62383216000 (1ps)
+Compile Control
+Run Control (full pixel checks can take several minutes)
+PASS UART commands, checksums, priority, fallback, acknowledge/clear, duplicate suppression, frame race, controls; 3 valid status packets
+D:\completecode1\emergency_v2\sim\tb_terminal_control.sv:167: $finish called at 712760000 (1ps)
+Compile Plan
+Run Plan (full pixel checks can take several minutes)
+PASS configurable plan: defaults, normal/emergency dwell boundaries, priority and scene selection
+D:\completecode1\emergency_v2\sim\tb_plan_config.sv:45: $finish called at 7320000 (1ps)
+Compile Recovery
+Run Recovery (full pixel checks can take several minutes)
+PASS media self-healing: boot, failed scan retry, runtime fault and automatic recovery
+D:\completecode1\emergency_v2\sim\tb_media_recovery.sv:34: $finish called at 270000 (1ps)
+Compile Scale
+Run Scale (full pixel checks can take several minutes)
+PASS size 320x240 top_down=1 bank=0 every pixel + SDRAM address checked
+PASS size 320x240 top_down=0 bank=1 every pixel + SDRAM address checked
+PASS size 640x480 top_down=1 bank=2 every pixel + SDRAM address checked
+PASS size 640x480 top_down=0 bank=3 every pixel + SDRAM address checked
+PASS size 800x600 top_down=1 bank=4 every pixel + SDRAM address checked
+PASS size 800x600 top_down=0 bank=5 every pixel + SDRAM address checked
+PASS corrupt/truncated BMP never committed; ALL SCALE/LOAD TESTS PASSED
+D:\completecode1\emergency_v2\sim\tb_scale_load.sv:101: $finish called at 259304970000 (1ps)
+Compile Ingest
+Run Ingest (full pixel checks can take several minutes)
+request         128 lba=      1182 byte8=00
+request         129 lba=      1183 byte8=00
+request         130 lba=        32 byte8=03
+root FAT parse cluster=         2 next=00000003 max=      8184 lba=        32
+request         131 lba=      1184 byte8=42
+request         132 lba=      2080 byte8=00
+request         133 lba=      2081 byte8=60
+PASS FAT root chain + shuffled names + missing/corrupt/truncated files; later valid banks loaded; 1495 sectors 921600 writes
+D:\completecode1\emergency_v2\sim\tb_fat_ingest.sv:119: $finish called at 122531170000 (1ps)
+Compile IngestRetry
+Run IngestRetry (full pixel checks can take several minutes)
+request         128 lba=      1182 byte8=00
+request         129 lba=      1183 byte8=00
+request         130 lba=        32 byte8=03
+root FAT parse cluster=         2 next=00000003 max=      8184 lba=        32
+request         131 lba=      1184 byte8=42
+request         132 lba=      2080 byte8=00
+request         133 lba=      2081 byte8=60
+PASS whole-image retry: second page recovered after sector failure, later valid banks committed
+PASS FAT root chain + shuffled names + missing/corrupt/truncated files; later valid banks loaded; 1496 sectors 921600 writes
+D:\completecode1\emergency_v2\sim\tb_fat_ingest.sv:119: $finish called at 122531340000 (1ps)
+Compile Memory
+Run Memory (full pixel checks can take several minutes)
+bank 0 committed at 57737838000
+bank 2 committed at 115480113000
+bank 3 committed at 173233638000
+bank 4 committed at 230976563000
+bank 5 committed at 288716438000
+bank 1 committed at 346455938000
+PASS progressive loading: first_pixel=67200200 ns all_loaded=346455938 ns frames=19 pixels=5836800 background_reads=5124736 priority_contests=7163
+D:\completecode1\emergency_v2\sim\tb_terminal_memory.sv:238: $finish called at 385280180000 (1ps)
+Compile AudioStreamer
+Run AudioStreamer (full pixel checks can take several minutes)
+PASS audio FAT32 cross-cluster stream and exact file length
+D:\completecode1\emergency_v2\sim\tb_fat32_audio_streamer.sv:76: $finish called at 10645000 (1ps)
+Compile AudioPlayer
+Run AudioPlayer (full pixel checks can take several minutes)
+PASS PCM event selection, plan mappings and mall voice guard, 3x samples, loop, switch, tail and error stop
+D:\completecode1\emergency_v2\sim\tb_tf_pcm_audio_player.sv:133: $finish called at 8610000 (1ps)
+Compile Overlay
+Run Overlay (full pixel checks can take several minutes)
+PASS OSD glyph pixels, no 0000, five-level bars; lit glyph pixels=595
+D:\completecode1\emergency_v2\sim\tb_terminal_overlay.sv:65: $finish called at 291146000 (1ps)
+Compile SectorArbiter
+Run SectorArbiter (full pixel checks can take several minutes)
+PASS sector arbitration: simultaneous pulses, retained LBAs, alternating service and exclusive routing
+D:\completecode1\emergency_v2\sim\tb_media_sector_arbiter.sv:47: $finish called at 400000 (1ps)
+Compile SectorReplay
+Run SectorReplay (full pixel checks can take several minutes)
+PASS bounded sector retries: timeout, order, truncation, persistent failure and next request
+D:\completecode1\emergency_v2\sim\tb_sector_replay.sv:49: $finish called at 390350000 (1ps)
+Compile LoadContention
+Run LoadContention (full pixel checks can take several minutes)
+PASS full-row background contention peak=665 reads=587699 writes=11520
+D:\completecode1\emergency_v2\sim\tb_load_contention.sv:67: $finish called at 47603175000 (1ps)
+Compile MediaAssets
+Run MediaAssets (full pixel checks can take several minutes)
+actual BMP bank=0 size=320x240 bytes=230454
+actual BMP bank=1 size=800x600 bytes=1440054
+actual BMP bank=2 size=640x480 bytes=921654
+actual BMP bank=3 size=640x480 bytes=921654
+actual BMP bank=4 size=640x480 bytes=921654
+actual BMP bank=5 size=640x480 bytes=921654
+release banks committed: 000001 at 100885713000
+release banks committed: 000011 at 723383888000
+release banks committed: 000111 at 1118016088000
+release banks committed: 001111 at 1512648288000
+release banks committed: 011111 at 1907280488000
+release banks committed: 111111 at 2301912688000
+PASS mixed-size actual assets: 320x240 enlarged, 800x600 reduced, four 640x480 unchanged; normalized pixels and addresses checked
+PASS actual six BMPs: 1843200 matching SDRAM writes; four PCM streams, background sound, volume mute; valid PLAN.BIN; starts=4 bytes=18432
+D:\completecode1\emergency_v2\sim\tb_media_assets.sv:130: $finish called at 2303654150000 (1ps)
+All requested simulations passed.
+Full V2 regression completed: 17/17.

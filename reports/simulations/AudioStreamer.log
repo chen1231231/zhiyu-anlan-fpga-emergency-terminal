@@ -1,0 +1,2 @@
+PASS audio FAT32 cross-cluster stream and exact file length
+D:\completecode1\emergency_v2\sim\tb_fat32_audio_streamer.sv:76: $finish called at 10645000 (1ps)

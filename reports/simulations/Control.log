@@ -1,0 +1,2 @@
+PASS UART commands, checksums, priority, fallback, acknowledge/clear, duplicate suppression, frame race, controls; 3 valid status packets
+D:\completecode1\emergency_v2\sim\tb_terminal_control.sv:167: $finish called at 712760000 (1ps)
